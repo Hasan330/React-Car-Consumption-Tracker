@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from '../logo.svg';
 import '../styles/App.css';
 
-import Owner from '../components/Owners';
+import Owner from '../components/listOwners';
 
 
 class App extends Component {
