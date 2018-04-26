@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React                            from 'react';
+import ReactDOM                         from 'react-dom';
 import promise                          from 'redux-promise';
 import { Provider }                     from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
@@ -29,5 +29,3 @@ ReactDOM.render(
 
 
 registerServiceWorker();
-
-
