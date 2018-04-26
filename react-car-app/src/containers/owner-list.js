@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { fetchUsers } from '../actions';
 
 import _ from 'lodash';
+import '../App.css';
+
 
 class Owner extends Component{
 
@@ -14,7 +16,7 @@ class Owner extends Component{
 		return _.map(this.props.users, user => {
 			console.log("User is " + user.id)
 			return(
-			<li key={user.id}>
+			<li className="list-group-item" key={user.id}>
 				{user.name}
 			</li>
 		)
@@ -28,7 +30,7 @@ class Owner extends Component{
 		return(
 			<div>
 				Welcome to the Owner's component
-				<div>
+				<div className="container">
 					<ul className="list-group">
 						{this.renderUsers()}
 					</ul>

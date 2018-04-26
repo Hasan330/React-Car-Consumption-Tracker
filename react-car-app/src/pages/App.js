@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo                 from '../logo.svg';
-import Owner                from '../containers/owner-list';
+import OwnerList                from '../containers/owner-list';
 
-import '../styles/App.css';
+import '../App.css';
 
 
 
@@ -17,7 +17,7 @@ class App extends Component {
         <p className="App-intro">
           Welcome to the react car app
         </p>
-          <Owner />
+          <OwnerList />
       </div>
     );
   }
