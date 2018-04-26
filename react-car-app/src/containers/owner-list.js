@@ -4,9 +4,9 @@ import { fetchUsers } from '../actions';
 
 class Owner extends Component{
 
-	// componentDidMount() {
-	// 	this.props.fetchUsers();
-	// }
+	componentDidMount() {
+		this.props.fetchUsers();
+	}
 
 	render(){
 		console.log(`List of users is: ${this.props.users}`);
