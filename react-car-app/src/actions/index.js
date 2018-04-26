@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const FETCH_USERS = 'fetch_users';
 
-const ROOT_URL = 'http://localhost:8081';
+const ROOT_URL = 'http://localhost:8080';
 const USER_ROUTE = 'owners';
 
 export function fetchUsers() {

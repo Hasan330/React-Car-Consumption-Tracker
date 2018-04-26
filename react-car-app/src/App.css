@@ -22,7 +22,8 @@
   font-size: large;
 }
 
-.container {
+.App .container {
+  display: block;
   align-self: left;
   max-width: 30%;
 }
