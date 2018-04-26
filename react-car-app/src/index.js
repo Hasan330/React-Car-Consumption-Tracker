@@ -5,7 +5,7 @@ import { Provider }                     from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import App        			            from './pages/App';
+import Homepage        			        from './pages/Homepage';
 import Owners        			        from './pages/Owners';
 import reducers                         from './reducers';
 import registerServiceWorker            from './registerServiceWorker';
@@ -22,7 +22,7 @@ ReactDOM.render(
     	<div>
     		<Switch>
    				<Route path="/owners/" component={Owners} />
-   				<Route path="/" component={App} />
+   				<Route path="/" component={Homepage} />
    			</Switch>
     	</div>
    </BrowserRouter>
