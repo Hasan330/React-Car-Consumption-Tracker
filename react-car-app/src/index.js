@@ -6,11 +6,10 @@ import { createStore, applyMiddleware } from 'redux';
 import {BrowserRouter, Route, Switch }  from 'react-router-dom'
 
 
-import reducers   from './reducers';
 import './styles/index.css';
-import App from './pages/App';
-import registerServiceWorker from './registerServiceWorker';
-
+import App        			            from './pages/App';
+import reducers                         from './reducers';
+import registerServiceWorker            from './registerServiceWorker';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 

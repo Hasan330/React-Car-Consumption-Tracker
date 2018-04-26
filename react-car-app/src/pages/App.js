@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
+import logo                 from '../logo.svg';
+import Owner                from '../containers/owner-list';
+
 import '../styles/App.css';
 
-import Owner from '../containers/owner-list';
 
 
 class App extends Component {
