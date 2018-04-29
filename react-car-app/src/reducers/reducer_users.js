@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _               from 'lodash';
 import { FETCH_USERS } from '../actions';
 
 

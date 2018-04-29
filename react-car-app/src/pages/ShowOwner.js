@@ -3,7 +3,7 @@ import Header               from '../components/header'
 
 import '../App.css';
 
-class Owner extends Component {
+class ShowOwner extends Component {
   render() {
     return (
       <div>
@@ -13,4 +13,4 @@ class Owner extends Component {
   }
 }
 
-export default Owner;
+export default ShowOwner;

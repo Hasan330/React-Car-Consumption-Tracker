@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchUsers } from '../actions';
-import {Link} from 'react-router-dom';
+import { connect }          from 'react-redux';
+import { fetchUsers }       from '../actions';
+import {Link}               from 'react-router-dom';
 
 
-import _ from 'lodash';
+import _                    from 'lodash';
 import '../App.css';
 
 
-class Owner extends Component{
+class OwnerList extends Component{
 
 	componentDidMount() {
 		this.props.fetchUsers();
@@ -25,8 +25,6 @@ class Owner extends Component{
 			</li>
 		)
 		})
-		
-
 	}
 
 	render(){
@@ -51,4 +49,4 @@ function mapStateToProps(state) {
 }
 
 //Shortcut to mapDispatchToProps
-export default connect(mapStateToProps, { fetchUsers: fetchUsers })(Owner);
+export default connect(mapStateToProps, { fetchUsers: fetchUsers })(OwnerList);

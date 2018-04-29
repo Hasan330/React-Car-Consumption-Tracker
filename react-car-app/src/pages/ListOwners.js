@@ -5,7 +5,7 @@ import Header               from '../components/header'
 
 import '../App.css';
 
-class App extends Component {
+class ListOwners extends Component {
   render() {
     return (
       <div className="App">
@@ -16,4 +16,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default ListOwners;

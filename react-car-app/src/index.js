@@ -5,8 +5,8 @@ import { Provider }                     from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import Homepage        			        from './pages/Homepage';
-import Owners        			        from './pages/Owners';
+import ListOwners        			    from './pages/ListOwners';
+import ShowOwner        		        from './pages/ShowOwner';
 import reducers                         from './reducers';
 import registerServiceWorker            from './registerServiceWorker';
 
@@ -21,8 +21,8 @@ ReactDOM.render(
   	<BrowserRouter>
     	<div>
     		<Switch>
-   				<Route path="/owners/" component={Owners} />
-   				<Route path="/" component={Homepage} />
+   				<Route path="/owners/:id" component={ShowOwner} />
+   				<Route path="/owners/"    component={ListOwners} />
    			</Switch>
     	</div>
    </BrowserRouter>
