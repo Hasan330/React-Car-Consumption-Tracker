@@ -31,7 +31,7 @@ export function fetchOwner(id) {
 	}
 }
 
-export function deleteOwner(id) {
-	console.log("Delete owner functionality not implemented yet")
-	return 'Hello';
-}
+// export function deleteOwner(id) {
+// 	console.log("Delete owner functionality not implemented yet")
+// 	return 'Hello';
+// }

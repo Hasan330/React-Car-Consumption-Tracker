@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchOwner, deleteOwner } from '../actions';
+import { fetchOwner } from '../actions';
 import { Link } from 'react-router-dom';
 
 class OwnerDetails extends Component {
@@ -28,6 +28,9 @@ class OwnerDetails extends Component {
 				<div> Loading.. </div>
 			)
 		}
+		else{
+			console.log("Props are ", this.props)
+		}
 
 		return(
 			<div>
@@ -51,9 +54,12 @@ class OwnerDetails extends Component {
 	}
 }
 
-function mapStateToProps({ users }, ownProps) {
-	console.log("Owner Details --> ", users)
-	return { owner: users[ownProps.match.params.id] }
+function mapStateToProps(state, ownProps) {
+	console.log("Owner Details --> ", state.users)
+	// return { owner: users[ownProps.match.params.id] }
+	return { owner: state.users };
+
+
 }
 
-export default connect(mapStateToProps, { fetchOwner, deleteOwner } )(OwnerDetails)
+export default connect(mapStateToProps, { fetchOwner: fetchOwner } )(OwnerDetails)

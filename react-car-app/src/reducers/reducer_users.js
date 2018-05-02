@@ -1,4 +1,4 @@
-import _               from 'lodash';
+import _                            from 'lodash';
 import { FETCH_USERS, FETCH_OWNER } from '../actions';
 
 
@@ -13,6 +13,7 @@ export default function (state = {}, action) {
 			// const newState    = { ...state };
 			// newState[post.id] = post;
 			// return newState;
+			console.log("FETCH OWNER ", action.payload.data)
 			return { ...state, [action.payload.data.id]: action.payload.data} //key interpolation
 		
 		default: 
