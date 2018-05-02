@@ -7,7 +7,7 @@ import '../App.css';
 class ShowOwner extends Component {
   render() {
     return (
-      <div>
+      <div className="App">
           <Header />
           <OwnerDetails />
       </div>

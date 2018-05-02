@@ -1,14 +1,15 @@
 import React                            from 'react';
 import ReactDOM                         from 'react-dom';
-import promise                          from 'redux-promise';
 import { Provider }                     from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import promise                          from 'redux-promise';
 
-import ListOwners        			    from './pages/ListOwners';
-import ShowOwner        		        from './pages/ShowOwner';
+
 import reducers                         from './reducers';
-import registerServiceWorker            from './registerServiceWorker';
+import ListOwners        			          from './pages/ListOwners';
+import ShowOwner        		            from './pages/ShowOwner';
+// import registerServiceWorker            from './registerServiceWorker';
 
 import './styles/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -31,4 +32,4 @@ ReactDOM.render(
  , document.getElementById('root'));
 
 
-registerServiceWorker();
+// registerServiceWorker();

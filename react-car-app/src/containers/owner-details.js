@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchOwner } from '../actions';
-import { Link } from 'react-router-dom';
+import { connect }          from 'react-redux';
+import { fetchOwner }       from '../actions';
+import { Link }             from 'react-router-dom';
 
 class OwnerDetails extends Component {
 
 	componentDidMount(){
 		if(!this.props.owner){
+			console.log("Component didn't mount yet, fetching data")
 			const { id } = this.props.match.params;  //provided by react-router
 			this.props.fetchOwner(id);
+		}
+		else{
+			console.log("Component did mount")
+			// const { id } = this.props.match.params;  //provided by react-router
+
+			this.props.fetchOwner(3);
 		}
 	}
 
@@ -21,6 +28,7 @@ class OwnerDetails extends Component {
 	}
 
 	render(){
+		console.log("Props in the render function are ", this.props)
 		const { owner } = this.props;
 
 		if(!owner){
@@ -29,7 +37,7 @@ class OwnerDetails extends Component {
 			)
 		}
 		else{
-			console.log("Props are ", this.props)
+			console.log("Owner 111", owner)
 		}
 
 		return(
@@ -55,11 +63,11 @@ class OwnerDetails extends Component {
 }
 
 function mapStateToProps(state, ownProps) {
-	console.log("state in map state to props is --> ", state)
-	// return { owner: users[ownProps.match.params.id] }
-	return { owner: state.users };
+	console.log("State in mapStateToProps inside owner-details is: ", state)
+	// return { owner: state.owners[ownProps.match.params.id] }
+	// return { post: posts[ownProps.match.params.id] }
 
-
+	return { owner: state.owners };
 }
 
 export default connect(mapStateToProps, { fetchOwner: fetchOwner } )(OwnerDetails)

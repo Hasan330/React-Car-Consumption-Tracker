@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export const FETCH_USERS = 'fetch_users';
-export const FETCH_OWNER = 'fetch_owner';
+export const FETCH_OWNERS = 'fetch_owners';
+export const FETCH_OWNER  = 'fetch_owner';
 export const DELETE_OWNER = 'delete_owner';
 
 const ROOT_URL = 'http://localhost:8080';
@@ -9,14 +9,14 @@ const USER_ROUTE = 'owners';
 const GET = '/get?id='
 
 
-export function fetchUsers() {
+export function fetchOwners() {
 
 	const request = axios.get(`${ROOT_URL}/${USER_ROUTE}`);
 	console.log("Axios request is: ", request);
 
 	return {
-		type: FETCH_USERS,
-		payload: request
+		type    : FETCH_OWNERS,
+		payload : request
 	}
 }
 
@@ -26,8 +26,8 @@ export function fetchOwner(id) {
 	console.log("Axios request for owner is: ", request);
 
 	return {
-		type : FETCH_OWNER,
-		payload: request
+		type    : FETCH_OWNER,
+		payload : request
 	}
 }
 
