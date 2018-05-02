@@ -51,8 +51,9 @@ class OwnerDetails extends Component {
 	}
 }
 
-function mapStateToProps({ posts }, ownProps) {
-	return { owner: owner[ownProps.match.params.id] }
+function mapStateToProps({ users }, ownProps) {
+	console.log("Owner Details --> ", users)
+	return { owner: users[ownProps.match.params.id] }
 }
 
 export default connect(mapStateToProps, { fetchOwner, deleteOwner } )(OwnerDetails)
