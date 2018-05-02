@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect }          from 'react-redux';
-import { fetchUsers }       from '../actions';
+import { fetchOwners }       from '../actions';
 import {Link}               from 'react-router-dom';
 
 
@@ -11,16 +11,16 @@ import '../App.css';
 class OwnerList extends Component{
 
 	componentDidMount() {
-		this.props.fetchUsers();
+		this.props.fetchOwners();
 	}
 
-	renderUsers(){
-		return _.map(this.props.users, user => {
-			console.log("User is " + user.id)
+	renderOwners(){
+		return _.map(this.props.owners, owner => {
+			console.log("Owner is " + owner.id)
 			return(
-			<li className="list-group-item" key={user.id}>
-					<Link to={`/owners/get?id=${user.id}`}>
-						{user.name}
+			<li className="list-group-item" key={owner.id}>
+					<Link to={`/owners/get?id=${owner.id}`}>
+						{owner.name}
 					</Link>
 			</li>
 		)
@@ -28,14 +28,14 @@ class OwnerList extends Component{
 	}
 
 	render(){
-		console.log(`List of users is: ${this.props.users}`);
+		console.log(`List of owners is: ${this.props.owners}`);
 		return(
 			<div>
 				Welcome to the Owner's component
 				<div className="container ">
 					<div className="row">
 						<ul className="list-group .col-xs-4">
-						{this.renderUsers()}
+						{this.renderOwners()}
 					</ul>
 					</div>
 					
@@ -45,8 +45,8 @@ class OwnerList extends Component{
 }
 
 function mapStateToProps(state) {
-	return { users: state.users };
+	return { owners: state.owners };
 }
 
 //Shortcut to mapDispatchToProps
-export default connect(mapStateToProps, { fetchUsers: fetchUsers })(OwnerList);
+export default connect(mapStateToProps, { fetchOwners: fetchOwners })(OwnerList);
