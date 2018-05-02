@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header               from '../components/header'
+import OwnerDetails         from '../containers/owner-details'
 
 import '../App.css';
 
@@ -8,6 +9,7 @@ class ShowOwner extends Component {
     return (
       <div>
           <Header />
+          <OwnerDetails />
       </div>
     );
   }
