@@ -19,7 +19,7 @@ class OwnerList extends Component{
 			console.log("Owner is " + owner.id)
 			return(
 			<li className="list-group-item" key={owner.id}>
-					<Link to={`/owners/get?id=${owner.id}`}>
+					<Link to={`/owners/get/${owner.id}`}>
 						{owner.name}
 					</Link>
 			</li>
