@@ -13,11 +13,10 @@ class OwnerShow extends Component{
 
 
 	render(){
-		console.log("Props in render method are: ", this.props)
-		console.log("State in render method is: ", this.state)
-		const { owners } = this.props;
+		console.log("Owner in render method is: ", this.props.owner)
+		const { owner } = this.props;
 
-		if(!owners){
+		if(!owner){
 			return(
 				<div> Loading.. </div>
 			)
@@ -25,17 +24,17 @@ class OwnerShow extends Component{
 
 		return(
 			<div>
-				In Owner Show Container
+				<h2> Name: {owner.name}  ID: {owner.id} </h2>
+				<p> {owner.cars[0].brand} </p>
 			</div>
 		)
 	}
 }
 
 
-function mapStateToProps(state, ownProps) {
-	console.log("State is:", state);
-	// return { owner: owners[ownProps.match.params.id] }
-	return { owner: state.owners };
+function mapStateToProps({owners}, ownProps) {
+	console.log("Owners in mapStateToProps function are:", owners);
+	return { owner: owners[ownProps.match.params.id] }
 }
 
 export default connect(mapStateToProps, { fetchOwner } )(OwnerShow)

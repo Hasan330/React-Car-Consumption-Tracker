@@ -7,7 +7,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import ListOwners        			          from './pages/ListOwners';
 import ShowOwner        		            from './pages/ShowOwner';
-import OwnerShow                        from './containers/owner-show'
 
 import reducers                         from './reducers';
 // import registerServiceWorker            from './registerServiceWorker';
