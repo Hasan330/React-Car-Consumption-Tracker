@@ -5,10 +5,12 @@ import { Provider }                     from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import ListOwners        			    from './pages/ListOwners';
-import ShowOwner        		        from './pages/ShowOwner';
+import ListOwners        			          from './pages/ListOwners';
+import ShowOwner        		            from './pages/ShowOwner';
+import OwnerShow                        from './containers/owner-show'
+
 import reducers                         from './reducers';
-import registerServiceWorker            from './registerServiceWorker';
+// import registerServiceWorker            from './registerServiceWorker';
 
 import './styles/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -21,7 +23,7 @@ ReactDOM.render(
   	<BrowserRouter>
     	<div>
     		<Switch>
-   				<Route path="/owners/:id" component={ShowOwner} />
+   				<Route path="/owners/get/:id" component={ShowOwner} />
    				<Route path="/owners/"    component={ListOwners} />
    			</Switch>
     	</div>
@@ -31,4 +33,4 @@ ReactDOM.render(
  , document.getElementById('root'));
 
 
-registerServiceWorker();
+// registerServiceWorker();
