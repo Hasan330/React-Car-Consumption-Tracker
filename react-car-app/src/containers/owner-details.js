@@ -55,7 +55,7 @@ class OwnerDetails extends Component {
 }
 
 function mapStateToProps(state, ownProps) {
-	console.log("Owner Details --> ", state.users)
+	console.log("state in map state to props is --> ", state)
 	// return { owner: users[ownProps.match.params.id] }
 	return { owner: state.users };
 

@@ -6,6 +6,7 @@ export default function (state = {}, action) {
 
 	switch(action.type) {
 		case FETCH_USERS:
+			console.log("FETCH USERS ", action.payload.data)
 			return _.mapKeys(action.payload.data, 'id');  // transform array of users to object
 
 		case FETCH_OWNER:

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const FETCH_USERS = 'fetch_users';
 export const FETCH_OWNER = 'fetch_owner';
-export const DELETE_OWNER = 'delete_owner;'
+export const DELETE_OWNER = 'delete_owner';
 
 const ROOT_URL = 'http://localhost:8080';
 const USER_ROUTE = 'owners';

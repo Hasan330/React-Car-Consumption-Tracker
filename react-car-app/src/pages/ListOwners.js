@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo                 from '../logo.svg';
 import OwnerList            from '../containers/owner-list';
 import Header               from '../components/header'
 
