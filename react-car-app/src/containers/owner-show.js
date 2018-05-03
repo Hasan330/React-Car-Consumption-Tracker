@@ -48,7 +48,6 @@ class OwnerShow extends Component{
 		})
 	}
 
-
 	render(){
 		function hasCars() {
 			return (owner.cars.length ? 'Cars' : 'User has no cars yet !!')
@@ -83,7 +82,6 @@ class OwnerShow extends Component{
 		)
 	}
 }
-
 
 function mapStateToProps({owners}, ownProps) {
 	return { owner: owners[ownProps.match.params.id] }

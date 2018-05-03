@@ -6,7 +6,8 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import ListOwners        			          from './pages/ListOwners';
-import ShowOwner        		            from './pages/ShowOwner';
+import ShowOwner                        from './pages/ShowOwner';
+import AddOwner        		              from './pages/AddOwner';
 
 import reducers                         from './reducers';
 // import registerServiceWorker            from './registerServiceWorker';
@@ -22,6 +23,7 @@ ReactDOM.render(
   	<BrowserRouter>
     	<div>
     		<Switch>
+          <Route path="/owners/new" component={AddOwner} />
    				<Route path="/owners/get/:id" component={ShowOwner} />
    				<Route path="/owners/"    component={ListOwners} />
    			</Switch>
