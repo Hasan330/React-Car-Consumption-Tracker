@@ -1,7 +1,9 @@
 import React, { Component }      from 'react';
 import { connect }               from 'react-redux';
 import { fetchOwner }            from '../actions';
+import {Link}                    from 'react-router-dom';
 import _                         from 'lodash';
+
 
 import '../App.css';
 
@@ -13,7 +15,14 @@ class OwnerShow extends Component{
 	}
 
 	renderCars(){
-		return _.map(this.props.owner.cars, car => {
+		let { cars } = this.props.owner;
+		console.log("CARS " , cars)
+		
+		function hasRefills(car) {
+			return (car.refills.length ? car.refills[car.refills.length-1].cost : 'Car has no refills yet !!')
+		}
+
+		return _.map(cars, car => {
 			return(
 				<li className="list-group-item" key={car.brand}>
 						<div>
@@ -31,7 +40,7 @@ class OwnerShow extends Component{
 									Car Total Cost: {car.totalCost}
 								</li>
 								<li className="list-group-item">
-									Last Refill: {car.refills[car.refills.length-1].cost}
+									Last Refill: {hasRefills(car)}
 								</li>
 							</ul>
 						</div>
@@ -42,6 +51,10 @@ class OwnerShow extends Component{
 
 
 	render(){
+		function hasCars() {
+			return (owner.cars.length ? 'Cars' : 'User has no cars yet !!')
+		}
+
 		const { owner } = this.props;
 
 		if(!owner){
@@ -52,9 +65,12 @@ class OwnerShow extends Component{
 
 		return(
 			<div>
+				<Link className='btn btn-primary' to='/owners'>
+						Back To Owners
+				</Link>
 				<h2> User Details:  </h2>
 				<h3> Id: {owner.id} | Name: {owner.name} </h3>
-				<h3> Cars: </h3>
+				<h3> { `${hasCars()}`} </h3>
 				
 				<div className="container ">
 					<div className="row">
