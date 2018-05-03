@@ -15,8 +15,7 @@ class OwnerShow extends Component{
 	}
 
 	renderCars(){
-		let { cars } = this.props.owner;
-		console.log("CARS " , cars)
+		const { cars } = this.props.owner;
 		
 		function hasRefills(car) {
 			return (car.refills.length ? car.refills[car.refills.length-1].cost : 'Car has no refills yet !!')
@@ -24,7 +23,7 @@ class OwnerShow extends Component{
 
 		return _.map(cars, car => {
 			return(
-				<li className="list-group-item" key={car.brand}>
+				<li className="list-group-item" key={car.id}>
 						<div>
 							<ul className="list-group .col-xs-4">
 								<li className="list-group-item">

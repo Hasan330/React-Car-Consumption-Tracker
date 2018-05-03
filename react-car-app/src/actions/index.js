@@ -9,7 +9,6 @@ const OWNER_ROUTE = 'owners';
 export function fetchOwners() {
 
 	const request = axios.get(`${ROOT_URL}/${OWNER_ROUTE}`);
-	console.log("Axios request is: ", request);
 
 	return {
 		type: FETCH_OWNERS,
@@ -18,9 +17,7 @@ export function fetchOwners() {
 }
 
 export function fetchOwner(id) {
-
 	const request = axios.get(`${ROOT_URL}/${OWNER_ROUTE}/get?id=${id}`);
-	console.log("Owner details: ", request);
 
 	return {
 		type: FETCH_OWNER,

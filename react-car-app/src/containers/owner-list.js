@@ -16,7 +16,6 @@ class OwnerList extends Component{
 
 	renderOwners(){
 		return _.map(this.props.owners, owner => {
-			console.log("Owner is " + owner.id)
 			return(
 			<li className="list-group-item" key={owner.id}>
 					<Link to={`/owners/get/${owner.id}`}>
@@ -28,7 +27,6 @@ class OwnerList extends Component{
 	}
 
 	render(){
-		console.log(`List of owners is: ${this.props.owners}`);
 		return(
 			<div>
 				Welcome to the Owner's component
