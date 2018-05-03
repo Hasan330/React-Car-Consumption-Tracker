@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header               from '../components/header'
-import OwnerShow            from '../containers/owner-show'
+import Header               from '../components/header';
+import OwnerShow            from '../containers/owner-show';
 
 import '../App.css';
 
@@ -10,7 +10,7 @@ class ShowOwner extends Component {
     return (
       <div className="App">
           <Header />
-          <OwnerShow  {...this.props}/>
+          <OwnerShow  {...this.props}/> 
       </div>
     );
   }

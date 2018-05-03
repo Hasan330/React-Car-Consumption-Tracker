@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { connect }          from 'react-redux';
+import React, { Component }  from 'react';
+import { connect }           from 'react-redux';
 import { fetchOwners }       from '../actions';
-import {Link}               from 'react-router-dom';
+import {Link}                from 'react-router-dom';
 
 
-import _                    from 'lodash';
+import _                     from 'lodash';
 import '../App.css';
 
 
@@ -35,10 +35,9 @@ class OwnerList extends Component{
 				<div className="container ">
 					<div className="row">
 						<ul className="list-group .col-xs-4">
-						{this.renderOwners()}
-					</ul>
+							{this.renderOwners()}
+						</ul>
 					</div>
-					
 				</div>
 			</div>
 	)}
