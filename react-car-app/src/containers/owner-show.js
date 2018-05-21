@@ -4,8 +4,7 @@ import { fetchOwner }            from '../actions';
 import {Link}                    from 'react-router-dom';
 import _                         from 'lodash';
 
-
-import '../App.css';
+// import '/App.css'
 
 class OwnerShow extends Component{
 
@@ -63,7 +62,7 @@ class OwnerShow extends Component{
 
 		return(
 			<div>
-				<Link className='btn btn-primary' to='/owners'>
+				<Link className='btn btn-primary padded' to='/owners'>
 						Back To Owners
 				</Link>
 				<h2> User Details:  </h2>

@@ -3,10 +3,7 @@ import { connect }           from 'react-redux';
 import { fetchOwners }       from '../actions';
 import {Link}                from 'react-router-dom';
 
-
 import _                     from 'lodash';
-import '../App.css';
-
 
 class OwnerList extends Component{
 
@@ -27,8 +24,24 @@ class OwnerList extends Component{
 	}
 
 	render(){
+
+		if(_.isEmpty(this.props.owners)){
+			return (
+				<div>
+					<h3> Loading.. </h3>
+					<h3> Want to do something useful? check for CORS errors </h3>
+				</div>
+			)
+		}
+
 		return(
 			<div>
+				<div>
+					<Link className='btn btn-primary' to='/'>
+						Back To Homepage
+					</Link>
+				</div>
+
 				Welcome to the Owner's component
 				<div className="container ">
 					<div className="row">

@@ -7,7 +7,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import ListOwners        			          from './pages/ListOwners';
 import ShowOwner                        from './pages/ShowOwner';
-import AddOwner        		              from './pages/AddOwner';
+import AddOwner                         from './pages/AddOwner';
+import HomePage        		              from './pages/HomePage';
 
 import reducers                         from './reducers';
 // import registerServiceWorker            from './registerServiceWorker';
@@ -23,9 +24,10 @@ ReactDOM.render(
   	<BrowserRouter>
     	<div>
     		<Switch>
-          <Route path="/owners/new" component={AddOwner} />
-   				<Route path="/owners/get/:id" component={ShowOwner} />
-   				<Route path="/owners/"    component={ListOwners} />
+          <Route path="/owners/new"      component={AddOwner} />
+   				<Route path="/owners/get/:id"  component={ShowOwner} />
+          <Route path="/owners/"         component={ListOwners} />
+   				<Route path="/"                component={HomePage} />
    			</Switch>
     	</div>
    </BrowserRouter>
