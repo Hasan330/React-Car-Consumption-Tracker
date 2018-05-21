@@ -22,14 +22,9 @@
   font-size: large;
 }
 
-.App .container {
-  display: block;
+.container {
   align-self: left;
   max-width: 30%;
-}
-
-.padded {
-  padding-top: 10px;
 }
 
 @keyframes App-logo-spin {
